@@ -23,12 +23,4 @@ jobs:
     - name: release note
       uses: toolmantim/release-drafter@v5.2.0
       env:
-        GITHUB_TOKEN: ${{ secrets.TEST_TOKEN }}
-    - name: list
-      run: ls
-    - name: Upload
-      uses: skx/github-action-publish-binaries@master
-      env:
-        GITHUB_TOKEN: ${{ secrets.TEST_TOKEN }}
-      with:
-        args: 'ga'
+        GITHUB_TOKEN: ${{ secrets.TEST_TOKEN }
