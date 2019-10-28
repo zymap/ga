@@ -20,5 +20,6 @@ jobs:
       run: |
         go build .
         ls
+        echo ${{ GITHUB_TOKEN }}
     - name: release note
       uses: toolmantim/release-drafter@master
