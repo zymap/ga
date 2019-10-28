@@ -21,5 +21,7 @@ jobs:
           
       - name: publish
         uses: skx/github-action-publish-binaries@release-0.11
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKE }}
         with:
           args: 'ga'
