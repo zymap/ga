@@ -23,3 +23,5 @@ jobs:
         echo ${{ GITHUB_TOKEN }}
     - name: release note
       uses: toolmantim/release-drafter@master
+      with:
+        repo_token: ${{ GITHUB_TOKEN }}
