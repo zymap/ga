@@ -24,4 +24,4 @@ jobs:
     - name: release note
       uses: toolmantim/release-drafter@master
       with:
-        repo_token: ${{ GITHUB_TOKEN }}
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
