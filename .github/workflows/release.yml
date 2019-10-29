@@ -19,7 +19,10 @@ jobs:
           go build .
           ls
           mkdir tmp
-          cp ga /tmp
+          cp ga tmp
+          
+      - name: list
+        run: ls .
           
       - name: publish
         uses: skx/github-action-publish-binaries@release-0.11
