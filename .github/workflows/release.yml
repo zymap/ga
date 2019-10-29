@@ -18,6 +18,8 @@ jobs:
         run: |
           go build .
           ls
+          mkdir test
+          cp ga /test
           
       - name: publish
         uses: skx/github-action-publish-binaries@release-0.11
@@ -25,3 +27,10 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           args: 'ga'
+      
+      - name: publish
+        uses: skx/github-action-publish-binaries@release-0.11
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        with:
+          args: 'test/ga'
