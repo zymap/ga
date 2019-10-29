@@ -22,3 +22,5 @@ jobs:
         ls
     - name: release note
       uses: toolmantim/release-drafter@master
+      env:
+        GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
