@@ -1,0 +1,25 @@
+name: Cli
+
+on: 
+  push:
+    branches: 
+      - master
+    paths:
+      - 'cli/**'
+  pull_request:
+    branches: 
+      - master
+    paths:
+      - 'cli/**'
+    
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Run a one-line script
+      run: echo hello, new cli
+   
